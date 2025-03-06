@@ -32,9 +32,10 @@ function startCamera() {
 
 function stopCamera() {
     if (stream) {
+        // Stoppa alla video tracks
         let tracks = stream.getTracks();
         tracks.forEach(track => track.stop()); // Stoppa alla strömmar
-        video.srcObject = null;
+        video.srcObject = null; // Frigör strömmen från videoelementet
         stream = null;
     }
 }
