@@ -10,12 +10,12 @@ h1 {
     color: #333;
 }
 
-video {
-    object-fit: contain; /* Gör att videon skalar utan att bli fullskärm */
-    max-width: 100%; /* Se till att videon inte går utanför bredden */
-    height: auto; /* Bevara videoaspekten */
+#video {
+    border: 2px solid #333;
+    margin-top: 20px;
+    max-width: 100%;
+    height: auto;
 }
-
 
 button {
     margin-top: 20px;
