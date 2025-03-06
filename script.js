@@ -23,6 +23,11 @@ function startCamera() {
             currentStream = newStream;
             video.srcObject = newStream;
             stream = newStream;
+
+            // Försök att spela upp videon om Safari blockerar autoplay
+            if (video.play) {
+                video.play();
+            }
         })
         .catch((err) => {
             console.log("Fel vid åtkomst till kamera: ", err);
